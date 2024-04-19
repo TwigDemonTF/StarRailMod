@@ -1,0 +1,9 @@
+Acheron:
+  Name: Acheron, Words of Yore
+  Description: "{FriendP}|f:Scarlet Gensokyo|: Resore 2 |Health|. Gain 2 |Fate|"
+  UpgradedDescription: "{FriendP}|f:Scarlet Gensokyo|: Resore 5 |Health|. Gain 5 |Fate|"
+  ExtraDescription1: "{FriendA}|a:God's Punishment: Vlad Tepes|: Deal {Damage} |Damage| to all enemies. Gain 2 |Chaos|.|Fate(30):| Deal 30 |Damage| to all enemies and gain |Invincible| for 1 turn."
+  UpgradedExtraDescription: "Temp"
+  ExtraDescription2: "{FriendU}|u:Divine Art: Vampire Illusion|: |Draw| 3 cards. Gain |Vampire|. Deal 30 |Damage| to all enemies. Enter |Burst|. Gain {Value1} |Firepower| and |Spirit|. Gain {Block} |Block| and {Shield} |Barrier|. Gain {Mana}."
+  UpgradedExtraDescription2: "{FriendU}|u:Divine Art: Vampire Illusion|: |Draw| 3 cards. Gain |Vampire|. Deal 30 |Damage| to all enemies. Enter |Burst|. Gain {Value1} |Firepower| and |Spirit|. Gain {Block} |Block| and {Shield} |Barrier|. Gain {Mana}."
+  FlavorText: "Fate is in the palm of your hands."
