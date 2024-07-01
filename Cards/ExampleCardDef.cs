@@ -12,7 +12,7 @@ using LBoLEntitySideloader.Entities;
 using LBoLEntitySideloader.Resource;
 
 namespace StarRailMod {
-    public class ExampleCardDef : CardTemplate
+    public sealed class ExampleCardDef : CardTemplate
     {
         public override IdContainer GetId()
         {
@@ -51,7 +51,7 @@ namespace StarRailMod {
                 FindInBattle: true,
                 HideMesuem: false,
                 IsUpgradable: true,
-                Rarity: Rarity.Mythic,
+                Rarity: Rarity.Rare,
                 Type: CardType.Friend,
                 TargetType: TargetType.SingleEnemy,
                 Colors: new List<ManaColor>() { ManaColor.Black },
@@ -84,8 +84,8 @@ namespace StarRailMod {
                 UltimateCost: -9,
                 UpgradedUltimateCost: -9,
 
-                Keywords: Keyword.Retain | Keyword.Exile | Keyword.FriendCard | Keyword.Loyalty,
-                UpgradedKeywords: Keyword.Retain | Keyword.Exile | Keyword.FriendCard | Keyword.Loyalty,
+                Keywords: Keyword.None,
+                UpgradedKeywords: Keyword.None,
                 EmptyDescription: false,
                 RelativeKeyword: Keyword.None,
                 UpgradedRelativeKeyword: Keyword.None,
@@ -106,7 +106,7 @@ namespace StarRailMod {
     }
 
     [EntityLogic(typeof(ExampleCardDef))]
-    public class ExampleCard : Card {
+    public sealed class ExampleCard : Card {
         protected override IEnumerable<BattleAction> Actions(UnitSelector unitSelector, ManaGroup consumingMana, Interaction precondition) {
         
             yield return BuffAction<Firepower>(5);

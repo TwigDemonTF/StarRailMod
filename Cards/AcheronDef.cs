@@ -15,7 +15,7 @@ using LBoLEntitySideloader.Entities;
 using LBoLEntitySideloader.Resource;
 
 namespace StarRailMod {
-    public class AcheronDef : CardTemplate
+    public sealed class AcheronDef : CardTemplate
     {
         public override IdContainer GetId()
         {
@@ -54,7 +54,7 @@ namespace StarRailMod {
                 FindInBattle: true,
                 HideMesuem: false,
                 IsUpgradable: true,
-                Rarity: Rarity.Mythic,
+                Rarity: Rarity.Rare,
                 Type: CardType.Friend,
                 TargetType: TargetType.SingleEnemy,
                 Colors: new List<ManaColor>() { ManaColor.Black },
@@ -68,8 +68,8 @@ namespace StarRailMod {
                 UpgradedBlock: null,
                 Shield: null,
                 UpgradedShield: null,
-                Value1: null,
-                UpgradedValue1: null,
+                Value1: 5,
+                UpgradedValue1: 6,
                 Value2: null,
                 UpgradedValue2: null,
                 Mana: null,
@@ -110,7 +110,7 @@ namespace StarRailMod {
 
 
         [EntityLogic(typeof(AcheronDef))]
-        public class Acheron : Card {
+        public sealed class Acheron : Card {
             public override IEnumerable<BattleAction> OnTurnEndingInHand() {
                 return this.GetPassiveActions();
             }
