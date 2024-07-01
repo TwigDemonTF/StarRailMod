@@ -7,3 +7,13 @@ Acheron:
   ExtraDescription2: "{FriendU}|u:Divine Art: Vampire Illusion|: |Draw| 3 cards. Gain |Vampire|. Deal 30 |Damage| to all enemies. Enter |Burst|. Gain {Value1} |Firepower| and |Spirit|. Gain {Block} |Block| and {Shield} |Barrier|. Gain {Mana}."
   UpgradedExtraDescription2: "{FriendU}|u:Divine Art: Vampire Illusion|: |Draw| 3 cards. Gain |Vampire|. Deal 30 |Damage| to all enemies. Enter |Burst|. Gain {Value1} |Firepower| and |Spirit|. Gain {Block} |Block| and {Shield} |Barrier|. Gain {Mana}."
   FlavorText: "Fate is in the palm of your hands."
+
+ExampleCard:
+  Name: Example Card
+  Description: "This is an example card."
+  UpgradedDescription: "This is an upgraded example card."
+  ExtraDescription1: "This is an extra description."
+  UpgradedExtraDescription: "This is an upgraded extra description."
+  ExtraDescription2: "This is another extra description."
+  UpgradedExtraDescription2: "This is an upgraded another extra description."
+  FlavorText: "This is an example flavor text."

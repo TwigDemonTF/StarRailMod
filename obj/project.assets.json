@@ -5,7 +5,7 @@
       "BepInEx.Analyzers/1.0.8": {
         "type": "package"
       },
-      "BepInEx.BaseLib/5.4.20": {
+      "BepInEx.BaseLib/5.4.21": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/BepInEx.dll": {}
@@ -574,13 +574,13 @@
         "tools/uninstall.ps1"
       ]
     },
-    "BepInEx.BaseLib/5.4.20": {
-      "sha512": "0bXgYxbCEN2Ixp3kiFEhyw+RASeFQeg/ww+lbMt7if6XMeVS60eg6epNsMA8Jbx57dmNOzNevkKKw8mP8SUMqw==",
+    "BepInEx.BaseLib/5.4.21": {
+      "sha512": "IRgoMyJGoBW+uGR0C68L8WeRIMRnyL2RueOUDUTUgom2aiyltaxBkMydjmvkc+f3hZBa6ZLMlEF6bozNORmOyg==",
       "type": "package",
-      "path": "bepinex.baselib/5.4.20",
+      "path": "bepinex.baselib/5.4.21",
       "files": [
         ".nupkg.metadata",
-        "bepinex.baselib.5.4.20.nupkg.sha512",
+        "bepinex.baselib.5.4.21.nupkg.sha512",
         "bepinex.baselib.nuspec",
         "images/icon.png",
         "lib/net35/BepInEx.dll",
@@ -2411,6 +2411,7 @@
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
       "BepInEx.Analyzers >= 1.0.8",
+      "BepInEx.BaseLib >= 5.4.21",
       "BepInEx.Core >= 5.4.21",
       "HarmonyX >= 2.9.0",
       "Krafs.Publicizer >= 2.2.1"
@@ -2422,14 +2423,14 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "X:\\!GettingGood\\LBOL Modding\\StarRailMod\\StarRailMod.csproj",
+      "projectUniqueName": "C:\\Users\\troll\\!Coding\\School\\Roc-Teraa\\Stage\\StarRailMod\\StarRailMod.csproj",
       "projectName": "StarRailMod",
-      "projectPath": "X:\\!GettingGood\\LBOL Modding\\StarRailMod\\StarRailMod.csproj",
+      "projectPath": "C:\\Users\\troll\\!Coding\\School\\Roc-Teraa\\Stage\\StarRailMod\\StarRailMod.csproj",
       "packagesPath": "C:\\Users\\troll\\.nuget\\packages\\",
-      "outputPath": "X:\\!GettingGood\\LBOL Modding\\StarRailMod\\obj\\",
+      "outputPath": "C:\\Users\\troll\\!Coding\\School\\Roc-Teraa\\Stage\\StarRailMod\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "X:\\!GettingGood\\LBOL Modding\\StarRailMod\\NuGet.Config",
+        "C:\\Users\\troll\\!Coding\\School\\Roc-Teraa\\Stage\\StarRailMod\\NuGet.Config",
         "C:\\Users\\troll\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2438,6 +2439,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {},
         "https://nuget.bepinex.dev/v3/index.json": {}
       },
@@ -2467,6 +2469,10 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[1.0.8, )"
+          },
+          "BepInEx.BaseLib": {
+            "target": "Package",
+            "version": "[5.4.21, )"
           },
           "BepInEx.Core": {
             "target": "Package",
@@ -2499,7 +2505,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -117,11 +117,11 @@ namespace PvB
         public override ModelOption LoadModelOptions()
         {
             // ppu = sprite size, smaller is bigger
-            return new ModelOption(ResourceLoader.LoadSpriteAsync("Acheron_Game_Sprite.png", AcheronPlayerUnitDef.dir, ppu: 56));
+            return new ModelOption(ResourceLoader.LoadSpriteAsync("AcheronGameSprite.png", AcheronPlayerUnitDef.dir, ppu: 56));
         }
 
         // ppu = sprite size, smaller is bigger
-        public override UniTask<Sprite> LoadSpellSprite() => ResourceLoader.LoadSpriteAsync("Acheron_Game_Sprite.png", AcheronPlayerUnitDef.dir, ppu: 550);
+        public override UniTask<Sprite> LoadSpellSprite() => ResourceLoader.LoadSpriteAsync("AcheronGameSprite.png", AcheronPlayerUnitDef.dir, ppu: 550);
 
 
         public override UnitModelConfig MakeConfig()

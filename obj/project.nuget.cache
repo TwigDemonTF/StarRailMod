@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Fz7z7/+jM2DroCPHGGoeKGD69Mnp6SMa2fOM+sFOSqu/4b4gbih9sNK361jpiuGE0xuhXQN4WoJFU89XmlfxOw==",
+  "dgSpecHash": "Yi+p0FeRU+8=",
   "success": true,
-  "projectFilePath": "X:\\!GettingGood\\LBOL Modding\\StarRailMod\\StarRailMod.csproj",
+  "projectFilePath": "C:\\Users\\troll\\!Coding\\School\\Roc-Teraa\\Stage\\StarRailMod\\StarRailMod.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\troll\\.nuget\\packages\\bepinex.analyzers\\1.0.8\\bepinex.analyzers.1.0.8.nupkg.sha512",
-    "C:\\Users\\troll\\.nuget\\packages\\bepinex.baselib\\5.4.20\\bepinex.baselib.5.4.20.nupkg.sha512",
+    "C:\\Users\\troll\\.nuget\\packages\\bepinex.baselib\\5.4.21\\bepinex.baselib.5.4.21.nupkg.sha512",
     "C:\\Users\\troll\\.nuget\\packages\\bepinex.core\\5.4.21\\bepinex.core.5.4.21.nupkg.sha512",
     "C:\\Users\\troll\\.nuget\\packages\\harmonyx\\2.9.0\\harmonyx.2.9.0.nupkg.sha512",
     "C:\\Users\\troll\\.nuget\\packages\\krafs.publicizer\\2.2.1\\krafs.publicizer.2.2.1.nupkg.sha512",

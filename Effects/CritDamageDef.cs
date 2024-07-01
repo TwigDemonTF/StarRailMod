@@ -10,21 +10,22 @@ using LBoLEntitySideloader.Resource;
 using UnityEngine;
 
 
-namespace StarRailMod {
+namespace StarRailMod
+{
     public class CritDamageDef : StatusEffectTemplate
     {
         public override IdContainer GetId()
-        {   
+        {
             return nameof(CritDamage);
         }
 
         public override LocalizationOption LoadLocalization()
         {
-            #pragma warning disable
-                var loc = new GlobalLocalization(BepinexPlugin.embeddedSource);
-                loc.LocalizationFiles.AddLocaleFile(LBoL.Core.Locale.En, "StatusEffectsEn.yaml");
-                return loc;
-            #pragma warning restore
+#pragma warning disable
+            var loc = new GlobalLocalization(BepinexPlugin.embeddedSource);
+            loc.LocalizationFiles.AddLocaleFile(LBoL.Core.Locale.En, "StatusEffectsEn.yaml");
+            return loc;
+#pragma warning restore
         }
 
         public override Sprite LoadSprite()
@@ -65,7 +66,8 @@ namespace StarRailMod {
     [EntityLogic(typeof(CritDamageDef))]
     public class CritDamage : StatusEffect
     {
-        protected override void OnAdded(Unit unit) {
+        protected override void OnAdded(Unit unit)
+        {
 
         }
     }

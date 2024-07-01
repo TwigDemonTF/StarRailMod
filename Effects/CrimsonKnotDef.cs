@@ -9,7 +9,8 @@ using LBoLEntitySideloader.Entities;
 using LBoLEntitySideloader.Resource;
 using UnityEngine;
 
-namespace StarRailMod {
+namespace StarRailMod
+{
     public class CrimsonKnotDef : StatusEffectTemplate
     {
         public override IdContainer GetId()
@@ -19,11 +20,11 @@ namespace StarRailMod {
 
         public override LocalizationOption LoadLocalization()
         {
-            #pragma warning disable
-                var loc = new GlobalLocalization(BepinexPlugin.embeddedSource);
-                loc.LocalizationFiles.AddLocaleFile(LBoL.Core.Locale.En, "StatusEffectsEn.yaml");
-                return loc;
-            #pragma warning restore
+#pragma warning disable
+            var loc = new GlobalLocalization(BepinexPlugin.embeddedSource);
+            loc.LocalizationFiles.AddLocaleFile(LBoL.Core.Locale.En, "StatusEffectsEn.yaml");
+            return loc;
+#pragma warning restore
         }
 
         public override Sprite LoadSprite()
@@ -62,12 +63,14 @@ namespace StarRailMod {
 
 
     [EntityLogic(typeof(CrimsonKnotDef))]
-    public class CrimsonKnot : StatusEffect {
+    public class CrimsonKnot : StatusEffect
+    {
         protected override void OnAdded(Unit unit)
         {
             int CrimsonKnotLevel = this.Level;
 
-            if (CrimsonKnotLevel >= 3) {
+            if (CrimsonKnotLevel >= 3)
+            {
                 this.Level = 3;
             }
         }

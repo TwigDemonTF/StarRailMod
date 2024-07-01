@@ -1,10 +1,46 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "X:\\!GettingGood\\LBOL Modding\\StarRailMod\\",
+  "WorkspaceRootPath": "C:\\Users\\troll\\!Coding\\School\\Roc-Teraa\\Stage\\StarRailMod\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0AD10AE8-C13C-4101-B37A-C8DC678D4B20}|StarRailMod.csproj|x:\\!gettinggood\\lbol modding\\starrailmod\\bepinexplugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0AD10AE8-C13C-4101-B37A-C8DC678D4B20}|StarRailMod.csproj|c:\\users\\troll\\!coding\\school\\roc-teraa\\stage\\starrailmod\\effects\\slasheddreamdef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AD10AE8-C13C-4101-B37A-C8DC678D4B20}|StarRailMod.csproj|solutionrelative:effects\\slasheddreamdef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AD10AE8-C13C-4101-B37A-C8DC678D4B20}|StarRailMod.csproj|c:\\users\\troll\\!coding\\school\\roc-teraa\\stage\\starrailmod\\cards\\acherondef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AD10AE8-C13C-4101-B37A-C8DC678D4B20}|StarRailMod.csproj|solutionrelative:cards\\acherondef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AD10AE8-C13C-4101-B37A-C8DC678D4B20}|StarRailMod.csproj|c:\\users\\troll\\!coding\\school\\roc-teraa\\stage\\starrailmod\\effects\\critratedef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AD10AE8-C13C-4101-B37A-C8DC678D4B20}|StarRailMod.csproj|solutionrelative:effects\\critratedef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AD10AE8-C13C-4101-B37A-C8DC678D4B20}|StarRailMod.csproj|c:\\users\\troll\\!coding\\school\\roc-teraa\\stage\\starrailmod\\effects\\critdamagedef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AD10AE8-C13C-4101-B37A-C8DC678D4B20}|StarRailMod.csproj|solutionrelative:effects\\critdamagedef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AD10AE8-C13C-4101-B37A-C8DC678D4B20}|StarRailMod.csproj|c:\\users\\troll\\!coding\\school\\roc-teraa\\stage\\starrailmod\\effects\\crimsonknotdef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AD10AE8-C13C-4101-B37A-C8DC678D4B20}|StarRailMod.csproj|solutionrelative:effects\\crimsonknotdef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AD10AE8-C13C-4101-B37A-C8DC678D4B20}|StarRailMod.csproj|c:\\users\\troll\\!coding\\school\\roc-teraa\\stage\\starrailmod\\resources\\cardsen.yaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{0AD10AE8-C13C-4101-B37A-C8DC678D4B20}|StarRailMod.csproj|solutionrelative:resources\\cardsen.yaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AD10AE8-C13C-4101-B37A-C8DC678D4B20}|StarRailMod.csproj|c:\\users\\troll\\!coding\\school\\roc-teraa\\stage\\starrailmod\\players\\acheronplayerunitdef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AD10AE8-C13C-4101-B37A-C8DC678D4B20}|StarRailMod.csproj|solutionrelative:players\\acheronplayerunitdef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AD10AE8-C13C-4101-B37A-C8DC678D4B20}|StarRailMod.csproj|c:\\users\\troll\\!coding\\school\\roc-teraa\\stage\\starrailmod\\pinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AD10AE8-C13C-4101-B37A-C8DC678D4B20}|StarRailMod.csproj|solutionrelative:pinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AD10AE8-C13C-4101-B37A-C8DC678D4B20}|StarRailMod.csproj|c:\\users\\troll\\!coding\\school\\roc-teraa\\stage\\starrailmod\\bepinexplugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0AD10AE8-C13C-4101-B37A-C8DC678D4B20}|StarRailMod.csproj|solutionrelative:bepinexplugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AD10AE8-C13C-4101-B37A-C8DC678D4B20}|StarRailMod.csproj|c:\\users\\troll\\!coding\\school\\roc-teraa\\stage\\starrailmod\\starrailmod.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{0AD10AE8-C13C-4101-B37A-C8DC678D4B20}|StarRailMod.csproj|solutionrelative:starrailmod.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,15 +55,128 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "BepinexPlugin.cs",
-              "DocumentMoniker": "X:\\!GettingGood\\LBOL Modding\\StarRailMod\\BepinexPlugin.cs",
-              "RelativeDocumentMoniker": "BepinexPlugin.cs",
-              "ToolTip": "X:\\!GettingGood\\LBOL Modding\\StarRailMod\\BepinexPlugin.cs",
-              "RelativeToolTip": "BepinexPlugin.cs",
-              "ViewState": "AQIAACQAAAAAAAAAAAAWwEIAAAAlAAAA",
+              "Title": "SlashedDreamDef.cs",
+              "DocumentMoniker": "C:\\Users\\troll\\!Coding\\School\\Roc-Teraa\\Stage\\StarRailMod\\Effects\\SlashedDreamDef.cs",
+              "RelativeDocumentMoniker": "Effects\\SlashedDreamDef.cs",
+              "ToolTip": "C:\\Users\\troll\\!Coding\\School\\Roc-Teraa\\Stage\\StarRailMod\\Effects\\SlashedDreamDef.cs",
+              "RelativeToolTip": "Effects\\SlashedDreamDef.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAUwBcAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-07T20:58:25.425Z",
+              "WhenOpened": "2024-06-13T16:44:46.091Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CritRateDef.cs",
+              "DocumentMoniker": "C:\\Users\\troll\\!Coding\\School\\Roc-Teraa\\Stage\\StarRailMod\\Effects\\CritRateDef.cs",
+              "RelativeDocumentMoniker": "Effects\\CritRateDef.cs",
+              "ToolTip": "C:\\Users\\troll\\!Coding\\School\\Roc-Teraa\\Stage\\StarRailMod\\Effects\\CritRateDef.cs",
+              "RelativeToolTip": "Effects\\CritRateDef.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAqwEcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T16:31:07.463Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CritDamageDef.cs",
+              "DocumentMoniker": "C:\\Users\\troll\\!Coding\\School\\Roc-Teraa\\Stage\\StarRailMod\\Effects\\CritDamageDef.cs",
+              "RelativeDocumentMoniker": "Effects\\CritDamageDef.cs",
+              "ToolTip": "C:\\Users\\troll\\!Coding\\School\\Roc-Teraa\\Stage\\StarRailMod\\Effects\\CritDamageDef.cs",
+              "RelativeToolTip": "Effects\\CritDamageDef.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAA6wEkAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T16:44:38.645Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CrimsonKnotDef.cs",
+              "DocumentMoniker": "C:\\Users\\troll\\!Coding\\School\\Roc-Teraa\\Stage\\StarRailMod\\Effects\\CrimsonKnotDef.cs",
+              "RelativeDocumentMoniker": "Effects\\CrimsonKnotDef.cs",
+              "ToolTip": "C:\\Users\\troll\\!Coding\\School\\Roc-Teraa\\Stage\\StarRailMod\\Effects\\CrimsonKnotDef.cs",
+              "RelativeToolTip": "Effects\\CrimsonKnotDef.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAA6wDgAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T16:44:31.46Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AcheronPlayerUnitDef.cs",
+              "DocumentMoniker": "C:\\Users\\troll\\!Coding\\School\\Roc-Teraa\\Stage\\StarRailMod\\Players\\AcheronPlayerUnitDef.cs",
+              "RelativeDocumentMoniker": "Players\\AcheronPlayerUnitDef.cs",
+              "ToolTip": "C:\\Users\\troll\\!Coding\\School\\Roc-Teraa\\Stage\\StarRailMod\\Players\\AcheronPlayerUnitDef.cs",
+              "RelativeToolTip": "Players\\AcheronPlayerUnitDef.cs",
+              "ViewState": "AQIAAEcAAAAAAAAAAAAwwFoAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T16:34:43.858Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CardsEn.yaml",
+              "DocumentMoniker": "C:\\Users\\troll\\!Coding\\School\\Roc-Teraa\\Stage\\StarRailMod\\Resources\\CardsEn.yaml",
+              "RelativeDocumentMoniker": "Resources\\CardsEn.yaml",
+              "ToolTip": "C:\\Users\\troll\\!Coding\\School\\Roc-Teraa\\Stage\\StarRailMod\\Resources\\CardsEn.yaml",
+              "RelativeToolTip": "Resources\\CardsEn.yaml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2024-06-13T16:30:56.935Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PInfo.cs",
+              "DocumentMoniker": "C:\\Users\\troll\\!Coding\\School\\Roc-Teraa\\Stage\\StarRailMod\\PInfo.cs",
+              "RelativeDocumentMoniker": "PInfo.cs",
+              "ToolTip": "C:\\Users\\troll\\!Coding\\School\\Roc-Teraa\\Stage\\StarRailMod\\PInfo.cs",
+              "RelativeToolTip": "PInfo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T16:30:48.418Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "StarRailMod.csproj",
+              "DocumentMoniker": "C:\\Users\\troll\\!Coding\\School\\Roc-Teraa\\Stage\\StarRailMod\\StarRailMod.csproj",
+              "RelativeDocumentMoniker": "StarRailMod.csproj",
+              "ToolTip": "C:\\Users\\troll\\!Coding\\School\\Roc-Teraa\\Stage\\StarRailMod\\StarRailMod.csproj",
+              "RelativeToolTip": "StarRailMod.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-06-13T16:13:23.511Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AcheronDef.cs",
+              "DocumentMoniker": "C:\\Users\\troll\\!Coding\\School\\Roc-Teraa\\Stage\\StarRailMod\\Cards\\AcheronDef.cs",
+              "RelativeDocumentMoniker": "Cards\\AcheronDef.cs",
+              "ToolTip": "C:\\Users\\troll\\!Coding\\School\\Roc-Teraa\\Stage\\StarRailMod\\Cards\\AcheronDef.cs",
+              "RelativeToolTip": "Cards\\AcheronDef.cs",
+              "ViewState": "AQIAAJMAAAAAAAAAAAAiwEwAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T16:13:06.357Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BepinexPlugin.cs",
+              "DocumentMoniker": "C:\\Users\\troll\\!Coding\\School\\Roc-Teraa\\Stage\\StarRailMod\\BepinexPlugin.cs",
+              "RelativeDocumentMoniker": "BepinexPlugin.cs",
+              "ToolTip": "C:\\Users\\troll\\!Coding\\School\\Roc-Teraa\\Stage\\StarRailMod\\BepinexPlugin.cs",
+              "RelativeToolTip": "BepinexPlugin.cs",
+              "ViewState": "AQIAAKQAAAAAAAAAAAAAAA8AAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-07T20:58:25.425Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }

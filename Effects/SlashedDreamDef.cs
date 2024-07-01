@@ -9,7 +9,8 @@ using LBoLEntitySideloader.Entities;
 using LBoLEntitySideloader.Resource;
 using UnityEngine;
 
-namespace StarRailMod {
+namespace StarRailMod
+{
     public class SlashedDreamDef : StatusEffectTemplate
     {
         public override IdContainer GetId()
@@ -19,11 +20,11 @@ namespace StarRailMod {
 
         public override LocalizationOption LoadLocalization()
         {
-            # pragma warning disable
-                var loc = new GlobalLocalization(BepinexPlugin.embeddedSource);
-                loc.LocalizationFiles.AddLocaleFile(LBoL.Core.Locale.En, "StatusEffectsEn.yaml");
-                return loc;
-            # pragma warning restore
+#pragma warning disable
+            var loc = new GlobalLocalization(BepinexPlugin.embeddedSource);
+            loc.LocalizationFiles.AddLocaleFile(LBoL.Core.Locale.En, "StatusEffectsEn.yaml");
+            return loc;
+#pragma warning restore
         }
 
         public override Sprite LoadSprite()
@@ -61,13 +62,15 @@ namespace StarRailMod {
     }
 
     [EntityLogic(typeof(SlashedDreamDef))]
-    public class SlashedDream : StatusEffect {
+    public class SlashedDream : StatusEffect
+    {
         protected override void OnAdded(Unit unit)
         {
             // Get slashed dream level
             int slashedDreamLevel = this.Level;
-            
-            if (slashedDreamLevel == 9) {
+
+            if (slashedDreamLevel == 9)
+            {
                 this.Level = 9;
             }
         }

@@ -97,12 +97,12 @@ namespace StarRailMod {
                 UpgradedRelativeEffects: new List<string>() { },
                 RelativeCards: new List<string>() { },
                 UpgradedRelativeCards: new List<string>() { },
-                Owner: "AcheronPlayerUnit",
+                Owner: "",
                 ImageId: null,
                 UpgradeImageId: null,
                 Unfinished: false,
                 Illustrator: "Default",
-                SubIllustrator: new List<string>() { "Alt" }
+                SubIllustrator: new List<string>() { "" }
              );
             return cardConfig;
 
