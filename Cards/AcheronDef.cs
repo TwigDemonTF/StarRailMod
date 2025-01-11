@@ -1,4 +1,7 @@
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using Cysharp.Threading.Tasks.Triggers;
 using LBoL.Base;
 using LBoL.ConfigData;
 using LBoL.Core;
@@ -8,13 +11,15 @@ using LBoL.Core.Battle.Interactions;
 using LBoL.Core.Cards;
 using LBoL.Core.StatusEffects;
 using LBoL.Core.Units;
-using LBoL.EntityLib.StatusEffects.Basic;
+using LBoL.Presentation.UI.Widgets;
 using LBoLEntitySideloader;
 using LBoLEntitySideloader.Attributes;
 using LBoLEntitySideloader.Entities;
 using LBoLEntitySideloader.Resource;
+using StarRailMod.Status;
 
-namespace StarRailMod {
+namespace StarRailMod
+{
     public sealed class AcheronDef : CardTemplate
     {
         public override IdContainer GetId()
@@ -40,7 +45,7 @@ namespace StarRailMod {
 
         public override CardConfig MakeConfig()
         {
-            var cardConfig = new CardConfig(
+            return new CardConfig(
                 Index: BepinexPlugin.sequenceTable.Next(typeof(CardConfig)),
                 Id: "",
                 Order: 10,
@@ -59,17 +64,17 @@ namespace StarRailMod {
                 TargetType: TargetType.SingleEnemy,
                 Colors: new List<ManaColor>() { ManaColor.Black },
                 IsXCost: false,
-                Cost: new ManaGroup() { Black = 3 },
+                Cost: new ManaGroup() { Black = 3 }, // Hybrid = 1, HybridColor = {HybridTypeNumber}
                 UpgradedCost: null,
                 MoneyCost: null,
                 Damage: 70,
                 UpgradedDamage: 100,
-                Block: null,
-                UpgradedBlock: null,
-                Shield: null,
-                UpgradedShield: null,
-                Value1: 5,
-                UpgradedValue1: 6,
+                Block: 0,
+                UpgradedBlock: 0,
+                Shield: 0,
+                UpgradedShield: 0,
+                Value1: 0,
+                UpgradedValue1: 0,
                 Value2: null,
                 UpgradedValue2: null,
                 Mana: null,
@@ -93,19 +98,17 @@ namespace StarRailMod {
                 RelativeKeyword: Keyword.None,
                 UpgradedRelativeKeyword: Keyword.None,
 
-                RelativeEffects: new List<string>() { },
+                RelativeEffects: new List<string>() { "CrimsonKnot" },
                 UpgradedRelativeEffects: new List<string>() { },
                 RelativeCards: new List<string>() { },
                 UpgradedRelativeCards: new List<string>() { },
-                Owner: "",
+                Owner: "AcheronPlayerUnit",
                 ImageId: null,
                 UpgradeImageId: null,
                 Unfinished: false,
                 Illustrator: "Default",
-                SubIllustrator: new List<string>() { "" }
+                SubIllustrator: new List<string>() { "ALT" }
              );
-            return cardConfig;
-
         }
 
 
@@ -124,21 +127,19 @@ namespace StarRailMod {
                 for (int i = 0; i < base.Battle.FriendPassiveTimes; i = num + 1) {
                     bool BattleShouldEnd = base.Battle.BattleShouldEnd;
 
-                    if (BattleShouldEnd) {
+                    if (BattleShouldEnd) 
                         yield break;
-                    }
                     num = i;
                 }
 
                 bool flag2 = base.Loyalty <= 0;
 
-                if (flag2) {
+                if (flag2)
                     yield return new RemoveCardAction(this);
-                }
-                //Trigger effects
+
+                // * Trigger passive effects
                 yield return BuffAction<SlashedDream>(1);
-                Unit target = base.Battle.RandomAliveEnemy;
-                yield return DebuffAction<CrimsonKnot>(target, 1);
+                yield return DebuffAction<CrimsonKnot>(base.Battle.RandomAliveEnemy, 1);
                 yield break;
             }
 
@@ -151,67 +152,55 @@ namespace StarRailMod {
             }
 
             protected override IEnumerable<BattleAction> Actions(UnitSelector unitSelector, ManaGroup consumingMana, Interaction precondition) {
-
                 bool flag = precondition == null || ((MiniSelectCardInteraction) precondition).SelectedCard.FriendToken == FriendToken.Active;
                 if (flag) {
                     base.Loyalty += base.ActiveCost;
                     yield return PerformAction.Effect(base.Battle.Player, "Wave1s", 0f, "BirdSing", 0f, PerformAction.EffectBehavior.PlayOneShot, 0f);
-
-                    yield return new DamageAction(base.Battle.Player, base.Battle.AllAliveEnemies, Damage, GunName, GunType.Single);
-
-                    bool flag2 = Battle.BattleShouldEnd;
-                    if (flag2)
-                        yield break;
+                    
+                    StatusEffect SlashedDreamEffect = base.Battle.Player.GetStatusEffect<SlashedDream>(); 
 
                     // Activate active effects
+                    int PlayerMaxHealth = base.Battle.Player.MaxHp;
+                    int HealthToHeal = (int)Math.Floor(PlayerMaxHealth * (SlashedDreamEffect.Level / 100f * 5f));
+
+                    yield return HealAction(HealthToHeal);
+                    yield return DefenseAction(0, 15, BlockShieldType.Normal, true);
+                    yield return new RemoveStatusEffectAction(SlashedDreamEffect);
+                    yield break;
                 }
                 else {
                     base.Loyalty += base.UltimateCost;
                     base.UltimateUsed = true;
                     yield return PerformAction.Effect(base.Battle.Player, "Wave1s", 0f, "BirdSing", 0f, PerformAction.EffectBehavior.PlayOneShot, 0f);
-                    
-                    // Activate ultimate effects
-                    DamageInfo AllDamage = new DamageInfo {
-                        Damage = 40,
-                    };
 
-                    yield return new DamageAction(base.Battle.Player, base.Battle.AllAliveEnemies, AllDamage, GunName, GunType.Single);
-
-                    flag = Battle.BattleShouldEnd;
-                    if (flag)
+                    if (Battle.BattleShouldEnd)
                         yield break;
 
-                    bool enemyHasCrimsonKnot = unitSelector.SelectedEnemy.HasStatusEffect<CrimsonKnot>();
-                    if (enemyHasCrimsonKnot) {
+                    if (unitSelector.SelectedEnemy.HasStatusEffect<CrimsonKnot>()) {
                         int CrimsonKnotLevel = unitSelector.SelectedEnemy.GetStatusEffect<CrimsonKnot>().Level;
-
+                        StatusEffect crimsonKnotStatusEffect = unitSelector.SelectedEnemy.GetStatusEffect<CrimsonKnot>();
                         float DamageIncreasepercentage = 0f;
 
-                        switch (CrimsonKnotLevel)
-                        {
-                            case 1: DamageIncreasepercentage = 1.30f; break;
-                            case 2: DamageIncreasepercentage = 1.60f; break;
-                            case 3: DamageIncreasepercentage = 1.90f; break;
-                        }
+                        if (CrimsonKnotLevel >= 9)
+                            DamageIncreasepercentage = 1.90f;
+                        else if (CrimsonKnotLevel >= 6)
+                            DamageIncreasepercentage = 1.60f;
+                        else if (CrimsonKnotLevel >= 3)
+                            DamageIncreasepercentage = 1.30f;
+
+                        yield return new RemoveStatusEffectAction(crimsonKnotStatusEffect, true);
 
                         DamageInfo CrimsonKnotDamage = new DamageInfo {
                             Damage = 70 * DamageIncreasepercentage,
                         };
-                        yield return new DamageAction(base.Battle.Player, unitSelector.SelectedEnemy, CrimsonKnotDamage, GunName, GunType.Single);
+
+                        yield return new DamageAction(base.Battle.Player, unitSelector.SelectedEnemy, CrimsonKnotDamage, GunName, GunType.Single); 
                     }
                     else
                         yield return new DamageAction(base.Battle.Player, unitSelector.SelectedEnemy, Damage, GunName, GunType.Single);
 
-                    flag = Battle.BattleShouldEnd;
-                    if (flag)
+                    if (Battle.BattleShouldEnd)
                         yield break;
-
-                    foreach (Unit enemy in base.Battle.AllAliveEnemies) {
-                        if (enemy.HasStatusEffect<CrimsonKnot>()) {
-                            StatusEffect effect = enemy.GetStatusEffect<CrimsonKnot>();
-                            yield return new RemoveStatusEffectAction(effect, true, 0.1f);
-                        }                    
-                    }
                 }
                 yield break;
             }

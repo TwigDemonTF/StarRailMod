@@ -10,6 +10,20 @@
         <BepInExFolder>$(GameFolder)\BepInEx</BepInExFolder>
     </PropertyGroup>
 
+    <PropertyGroup>
+        <TargetFileDir>C:\Users\troll\!ExternalPrograms\steamapps\common\LBoL\BepInEx\scripts\StarRailMod\</TargetFileDir>
+        <OutFileDir>C:\Users\troll\!ExternalPrograms\steamapps\common\LBoL\BepInEx\plugins\StarRailMod\</OutFileDir>
+    </PropertyGroup>
+
+    <Target Name="CopyModDll" AfterTargets="Build">
+        <Exec Command="if exist &quot;$(TargetFileDir)StarRailMod.dll&quot; (
+            del /Q &quot;$(OutFileDir)*.dll&quot; 2&gt;nul
+            copy &quot;$(TargetFileDir)StarRailMod.dll&quot; &quot;$(OutFileDir)&quot;
+        ) else (
+            echo File not found: &quot;$(TargetFileDir)StarRailMod.dll&quot;
+        )" />
+    </Target>
+
     <ItemGroup>
         <PackageReference Include="BepInEx.Analyzers" Version="1.0.8">
             <PrivateAssets>all</PrivateAssets>
@@ -25,9 +39,16 @@
     </ItemGroup>
 
     <PropertyGroup>
+        <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+    </PropertyGroup>
+
+    <PropertyGroup>
         <PublicizerClearCacheOnClean>true</PublicizerClearCacheOnClean>
         <PublicizerLogFilePath>.\Krafs.publicizer.log</PublicizerLogFilePath>
         <PublicizerRuntimeStrategies>IgnoresAccessChecksTo</PublicizerRuntimeStrategies>
+        <BaseOutputPath>C:\Users\troll\!ExternalPrograms\steamapps\common\LBoL\BepInEx\scripts\</BaseOutputPath>
+        <OutDir>$(BaseOutputPath)StarRailMod\</OutDir>
+        <OutputPath>$(OutDir)</OutputPath>
     </PropertyGroup>
     
     <!--Don't publicize virtual members which are meant to be overwritten in concrete entity logic types-->
@@ -329,7 +350,6 @@
     <Target Name="PostBuild" AfterTargets="PostBuildEvent">
         <Exec Command="copy /Y &quot;$(TargetPath)&quot; &quot;$(ProjectDir)&quot;&#xD;&#xA;IF exist &quot;$(BepInExFolder)\scripts\$(AssemblyName)&quot; goto skipDir&#xD;&#xA;mkdir &quot;$(BepInExFolder)\scripts\$(AssemblyName)&quot;&#xD;&#xA;:skipDir&#xD;&#xA;copy /Y &quot;$(TargetPath)&quot; &quot;$(BepInExFolder)\scripts\$(AssemblyName)&quot;&#xD;&#xA;xcopy /Y /E &quot;$(ProjectDir)DirResources\*&quot; &quot;$(BepInExFolder)\scripts\$(AssemblyName)&quot; 1&gt; NUL&#xD;&#xA;powershell -command &quot;Compress-Archive -Path '$(TargetPath)', '$(ProjectDir)DirResources\*', '$(ProjectDir)manifest.json', '$(ProjectDir)icon.png', '$(ProjectDir)README.md'   -DestinationPath  '$(ProjectDir)$(AssemblyName)-thunderstore.zip' -Force&quot;" />
     </Target>
-
 
 </Project>
 

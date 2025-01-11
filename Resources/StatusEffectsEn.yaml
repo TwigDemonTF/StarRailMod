@@ -1,8 +1,6 @@
-CritDamage:
-  Name: Crit Damage
-  Description: "Multiply damage delt by X where X is the value of this effect in percent."
-  FlavorText: "A critical hit!"
-CritRate:
-  Name: Crit Rate
-  Description: "Increase the chance of landing a critical hit by X percent where X is the value of this effect."
-  FlavorText: "OwO what's this? Its a crit!"
+CrimsonKnot:
+  Name: Crimson Knot
+  Decription: ""
+  Brief: "Increase damage dealt by 30%/60%/90% if the enemy has 3/6/9 |Crimson Knot| Stacks."
+  FlavorText: "Return to Nihility."
+

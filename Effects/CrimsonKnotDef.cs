@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using LBoL.Base;
 using LBoL.ConfigData;
+using LBoL.Core;
+using LBoL.Core.Battle;
 using LBoL.Core.StatusEffects;
 using LBoL.Core.Units;
 using LBoLEntitySideloader;
@@ -9,9 +11,9 @@ using LBoLEntitySideloader.Entities;
 using LBoLEntitySideloader.Resource;
 using UnityEngine;
 
-namespace StarRailMod
+namespace StarRailMod.Status
 {
-    public class CrimsonKnotDef : StatusEffectTemplate
+    public sealed class CrimsonKnotDef : StatusEffectTemplate
     {
         public override IdContainer GetId()
         {
@@ -20,11 +22,11 @@ namespace StarRailMod
 
         public override LocalizationOption LoadLocalization()
         {
-#pragma warning disable
+            #pragma warning disable
             var loc = new GlobalLocalization(BepinexPlugin.embeddedSource);
             loc.LocalizationFiles.AddLocaleFile(LBoL.Core.Locale.En, "StatusEffectsEn.yaml");
             return loc;
-#pragma warning restore
+            #pragma warning restore
         }
 
         public override Sprite LoadSprite()
@@ -34,7 +36,7 @@ namespace StarRailMod
 
         public override StatusEffectConfig MakeConfig()
         {
-            var statusEffectConfig = new StatusEffectConfig(
+            return new StatusEffectConfig(
                             Index: BepinexPlugin.sequenceTable.Next(typeof(StatusEffectConfig)),
                             Id: "",
                             Order: 10,
@@ -57,23 +59,16 @@ namespace StarRailMod
                             VFXloop: "Default",
                             SFX: "Default"
                 );
-            return statusEffectConfig;
         }
     }
 
 
     [EntityLogic(typeof(CrimsonKnotDef))]
-    public class CrimsonKnot : StatusEffect
+    public sealed class CrimsonKnot : StatusEffect
     {
         protected override void OnAdded(Unit unit)
         {
-            int CrimsonKnotLevel = this.Level;
-
-            if (CrimsonKnotLevel >= 3)
-            {
-                this.Level = 3;
-            }
+            base.OnAdded(unit);
         }
     }
-
 }

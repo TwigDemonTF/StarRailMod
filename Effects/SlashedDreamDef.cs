@@ -9,9 +9,9 @@ using LBoLEntitySideloader.Entities;
 using LBoLEntitySideloader.Resource;
 using UnityEngine;
 
-namespace StarRailMod
+namespace StarRailMod.Status
 {
-    public class SlashedDreamDef : StatusEffectTemplate
+    public sealed class SlashedDreamDef : StatusEffectTemplate
     {
         public override IdContainer GetId()
         {
@@ -20,11 +20,11 @@ namespace StarRailMod
 
         public override LocalizationOption LoadLocalization()
         {
-#pragma warning disable
+            #pragma warning disable
             var loc = new GlobalLocalization(BepinexPlugin.embeddedSource);
             loc.LocalizationFiles.AddLocaleFile(LBoL.Core.Locale.En, "StatusEffectsEn.yaml");
             return loc;
-#pragma warning restore
+            #pragma warning restore
         }
 
         public override Sprite LoadSprite()
@@ -34,7 +34,7 @@ namespace StarRailMod
 
         public override StatusEffectConfig MakeConfig()
         {
-            var statusEffectConfig = new StatusEffectConfig(
+            return new StatusEffectConfig(
                             Index: BepinexPlugin.sequenceTable.Next(typeof(StatusEffectConfig)),
                             Id: "",
                             Order: 10,
@@ -43,7 +43,7 @@ namespace StarRailMod
                             IsStackable: true,
                             StackActionTriggerLevel: null,
                             HasLevel: true,
-                            LevelStackType: StackType.Add,
+                            LevelStackType: StackType.Add,  
                             HasDuration: false,
                             DurationStackType: StackType.Add,
                             DurationDecreaseTiming: DurationDecreaseTiming.Custom,
@@ -57,22 +57,16 @@ namespace StarRailMod
                             VFXloop: "Default",
                             SFX: "Default"
                 );
-            return statusEffectConfig;
         }
     }
 
     [EntityLogic(typeof(SlashedDreamDef))]
-    public class SlashedDream : StatusEffect
+    public sealed class SlashedDream : StatusEffect
     {
         protected override void OnAdded(Unit unit)
         {
-            // Get slashed dream level
-            int slashedDreamLevel = this.Level;
-
-            if (slashedDreamLevel == 9)
-            {
+            if (this.Level >= 9)
                 this.Level = 9;
-            }
         }
     }
 }

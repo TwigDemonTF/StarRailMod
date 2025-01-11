@@ -74,28 +74,27 @@ namespace PvB
 
         public override PlayerUnitConfig MakeConfig()
         {
-            var config = new PlayerUnitConfig(
-            Id: "",
-            ShowOrder: 6,
-            Order: 0,
-            UnlockLevel: 0,
-            ModleName: "",
-            NarrativeColor: "#e58c27",
-            IsSelectable: true,
-            MaxHp: 100,
-            InitialMana: new LBoL.Base.ManaGroup() { Red = 2, Black = 2 },
-            InitialMoney: 100,
-            InitialPower: 0,
-            UltimateSkillA: "SakuyaUltU",
-            UltimateSkillB: "SakuyaUltU",
-            ExhibitA: "",
-            ExhibitB: "",
-            DeckA: new List<string> { "Acheron" },
-            DeckB: new List<string> { "Acheron" },
-            DifficultyA: 3,
-            DifficultyB: 3
+            return new PlayerUnitConfig(
+                Id: "",
+                ShowOrder: 6,
+                Order: 0,
+                UnlockLevel: 0,
+                ModleName: "",
+                NarrativeColor: "#e58c27",
+                IsSelectable: true,
+                MaxHp: 100,
+                InitialMana: new LBoL.Base.ManaGroup() { Red = 2, Black = 3 },
+                InitialMoney: 100,
+                InitialPower: 0,
+                UltimateSkillA: "SakuyaUltU",
+                UltimateSkillB: "SakuyaUltU",
+                ExhibitA: "FoyushiBo",
+                ExhibitB: "FoyushiBo",
+                DeckA: new List<string> { "Acheron" },
+                DeckB: new List<string> { "Acheron" },
+                DifficultyA: 3,
+                DifficultyB: 3
             );
-            return config;
         }
 
 
